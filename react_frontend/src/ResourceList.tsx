@@ -1,15 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Typography, Card, CardContent, CardActions, Button } from '@mui/material';
 
-
 const ResourceList = () => {
   const [resources, setResources] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:5000/api/resources')
       .then(response => response.json())
-      .then(data => setResources(data));
+      .then(data => {
+        if (Array.isArray(data)) {
+          setResources(data);
+        } else {
+          setError('Unexpected data format');
+        }
+      })
+      .catch(error => {
+        setError('Error fetching resources');
+        console.error('Error fetching resources:', error);
+      });
   }, []);
+
+  if (error) {
+    return (
+      <Container maxWidth="sm">
+        <Typography variant="h4" component="h2" gutterBottom>
+          Error: {error}
+        </Typography>
+      </Container>
+    );
+  }
 
   return (
     <Container maxWidth="sm">
