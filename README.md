@@ -1,5 +1,5 @@
 # CommuniCare Project
-![communicare-high-resolution-logo](https://github.com/GeoffreyFClark/CommuniCare/react_frontend/public/communicare_logo.png)
+![communicare-high-resolution-logo](https://github.com/GeoffreyFClark/CommuniCare/blob/main/react_frontend/public/communicare_logo.png)
 
 Welcome to the CommuniCare project repository!
 
