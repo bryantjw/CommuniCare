@@ -46,3 +46,4 @@ In a new terminal, navigate to the react_frontend directory and run `npm run dev
 View at the frontend's localhost:port which will then be linked in the terminal.
 
 
+![image](https://github.com/GeoffreyFClark/CommuniCare/assets/97141856/ffd9211f-f65d-460e-9c42-1ee45174fd8c)
